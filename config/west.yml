@@ -1,3 +1,10 @@
+# First check what's actually in the file
+cat config/west.yml
+
+# Now fix it - make sure this actually overwrites the file
+rm config/west.yml
+
+# Create the correct file
 cat > config/west.yml << 'EOF'
 manifest:
   defaults:
@@ -23,3 +30,6 @@ manifest:
   self:
     path: config
 EOF
+
+# Verify it's correct now
+cat config/west.yml | head -10
