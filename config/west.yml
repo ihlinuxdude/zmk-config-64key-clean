@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+# First check what's actually in the file
+cat config/west.yml
+
+# Now fix it - make sure this actually overwrites the file
+rm config/west.yml
+
+# Create the correct file
+cat > config/west.yml << 'EOF'
+>>>>>>> 92d1403220fc1dae9b726d875158c157db7d19e7
 manifest:
   defaults:
     remote: zmkfirmware
@@ -21,3 +32,10 @@ manifest:
 
   self:
     path: config
+<<<<<<< HEAD
+=======
+EOF
+
+# Verify it's correct now
+cat config/west.yml | head -10
+>>>>>>> 92d1403220fc1dae9b726d875158c157db7d19e7
