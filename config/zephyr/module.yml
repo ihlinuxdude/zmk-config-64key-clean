@@ -1,5 +1,6 @@
-name: zmk-config-64key-clean
+name: zmk-config
 build:
-  settings:
-    board_root: config
-    dts_root: config
+  cmake: .
+  kconfig: Kconfig
+  board_root: .
+  dts_root: .
