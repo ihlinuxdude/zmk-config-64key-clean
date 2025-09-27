@@ -1,4 +1,3 @@
-cat > config/west.yml << 'EOF'
 manifest:
   defaults:
     remote: zmkfirmware
@@ -22,4 +21,3 @@ manifest:
 
   self:
     path: config
-EOF
