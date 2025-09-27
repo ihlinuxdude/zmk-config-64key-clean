@@ -24,7 +24,6 @@ cat > config/boards/shields/charybdis_nano_right/charybdis_nano_right.overlay <<
     };
 };
 
-/* Nice!Nano v2 SPI0 pin mux */
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
