@@ -2,5 +2,5 @@ name: zmk-config-64key
 build:
   cmake: .
   kconfig: Kconfig
-  board_root: .
-  dts_root: .
+  board_root: true
+  dts_root: true
