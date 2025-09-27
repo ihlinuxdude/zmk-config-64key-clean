@@ -1,32 +1,6 @@
-name: Build ZMK
+name: Build ZMK firmware
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  build-right:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      # Install Zephyr SDK + west (no Docker pulls)
-      - uses: zmkfirmware/zephyr-west-action@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: West init & update
-        run: |
-          west init -l config
-          west update
-
-      - name: Build right (trackball)
-        run: |
-          west build -s zmk/app -b nice_nano_v2 -- \
-            -DSHIELD=charybdis_nano_right \
-            -DZMK_CONFIG=${{ github.workspace }}/config \
-            -DZMK_EXTRA_MODULES="${{ github.workspace }};${{ github.workspace }}/modules/zmk-input-behavior-listener;${{ github.workspace }}/modules/zmk-pmw3610-driver64key"
-          mkdir -p artifacts && cp build/zephyr/zmk.uf2 artifacts/charybdis_nano_right.uf2
-
-      - name: Upload UF2
-        uses: actions/upload-artifact@v4
-        with:
-          name: zmk-uf2
-          path: artifacts/*.uf2
+  build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
