@@ -1,4 +1,3 @@
-cat > config/boards/shields/charybdis_nano_right/charybdis_nano_right.keymap << 'EOF'
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
@@ -11,4 +10,3 @@ cat > config/boards/shields/charybdis_nano_right/charybdis_nano_right.keymap << 
         };
     };
 };
-EOF
