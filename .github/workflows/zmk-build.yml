@@ -2,5 +2,10 @@ name: Build ZMK firmware
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
+  sanity:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "workflow file is active"
+
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
