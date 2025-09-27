@@ -1,0 +1,10 @@
+/ {
+  keymap {
+    compatible = "zmk,keymap";
+
+    default_layer {
+      // Minimal placeholder—no real keys required for the trackball test
+      bindings = <&none>;
+    };
+  };
+};
