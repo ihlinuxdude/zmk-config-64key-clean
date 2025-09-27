@@ -1,0 +1,9 @@
+menu "Shield Configuration"
+
+config SHIELD_CHARYBDIS_NANO_RIGHT
+    bool "charybdis_nano_right"
+    help
+      Custom right half with PMW3610 and listener rotation.
+    depends on BOARD_NICE_NANO_V2
+
+endmenu

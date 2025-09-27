@@ -1,0 +1,2 @@
+# Expose all custom shield Kconfigs in this tree
+rsource "*/Kconfig"
