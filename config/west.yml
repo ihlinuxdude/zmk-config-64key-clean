@@ -1,0 +1,25 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: badjeff
+      url-base: https://github.com/badjeff
+    - name: ihlinuxdude
+      url-base: https://github.com/ihlinuxdude
+
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+
+    - name: zmk-pmw3610-driver64key
+      remote: ihlinuxdude
+      revision: main
+
+    - name: zmk-input-behavior-listener
+      remote: badjeff
+      revision: main
+
+  self:
+    path: config
