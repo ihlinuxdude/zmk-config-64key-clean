@@ -15,3 +15,4 @@ kick12
 kick
 kick
 kick
+ping2

@@ -1,4 +1,4 @@
-name: zmk-config
+name: zmk-config-64key
 build:
   cmake: .
   kconfig: Kconfig
