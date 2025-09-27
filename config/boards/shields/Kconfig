@@ -1,2 +1,3 @@
-# Expose all custom shield Kconfigs in this tree
-rsource "*/Kconfig"
+menu "Custom shields"
+rsource "charybdis_nano_right/Kconfig"
+endmenu
